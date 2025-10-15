@@ -10,13 +10,24 @@
   <div class="container">
     <h1>এইচএসসি রসায়ন মক টেস্ট</h1>
 
-    <button id="startBtn">পরীক্ষা শুরু করুন</button>
+    <div id="setupContainer">
+      <label>প্রশ্ন সংখ্যা নির্বাচন করুন:</label>
+      <select id="questionCount">
+        <option value="5">৫</option>
+        <option value="10">১০</option>
+        <option value="15">১৫</option>
+        <option value="25">২৫</option>
+      </select>
+
+      <label>পরীক্ষার সময় (মিনিটে):</label>
+      <input type="number" id="timeInput" value="5" min="1" max="60" />
+
+      <button id="startBtn">পরীক্ষা শুরু করুন</button>
+    </div>
+
     <div id="timer" class="hidden">সময় বাকি: <span id="time">00:00</span></div>
-
     <form id="quizContainer" class="hidden"></form>
-
     <button id="submitBtn" class="hidden">Submit Test</button>
-
     <div id="result" class="hidden"></div>
   </div>
 
